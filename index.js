@@ -6,6 +6,8 @@ const estudianteController = require('./controllers/estudiante.controller')
 const profesorController = require('./controllers/profesor.controller')
 const materiaController = require('./controllers/materia.controller')
 const materia_estudianteController = require('./controllers/materia_estudiante.controller')
+const tareaController = require('./controllers/tarea.controller')
+const avisoController = require('./controllers/aviso.controller')
 
 const app = express()
 
@@ -28,5 +30,7 @@ app.use('/api', estudianteController)
 app.use('/api', profesorController)
 app.use('/api', materiaController)
 app.use('/api', materia_estudianteController)
+app.use('/api', tareaController)
+app.use('/api', avisoController)
 
 app.listen(process.env.PORT || 3000, () => console.log("runing..."))
